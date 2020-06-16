@@ -1,0 +1,31 @@
+@function set-text-color($color) {
+    @if (lightness($color) > 60) {
+        @return #333;
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+$spacemounts: (1, 2, 3, 4, 5);
+
+@each $space in $spacemounts {
+
+    .mt-#{$space} {
+        margin-top: #{$space}rem;
+    }
+
+    .mb-#{$space} {
+        margin-bottom: #{$space}rem;
+    }
+
+    .mr-#{$space} {
+        margin-right:#{$space}rem;
+    }
+
+    .ml-#{$space} {
+        margin-left: #{$space}rem;
+    }
+
+}

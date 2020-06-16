@@ -1,0 +1,14 @@
+//Setup
+@import './setup/functions';
+@import './setup/mixins';
+@import './setup/variables';
+
+//Base
+@import './basics/base';
+@import './basics/buttons';
+
+
+//Components
+@import './components/app.scss';
+@import './components/side-navbar.scss';
+@import './components/home.scss';

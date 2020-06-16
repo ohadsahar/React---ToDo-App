@@ -1,0 +1,53 @@
+.layout {
+    height: 100vh;
+    .side-navbar {
+        position: fixed;
+        height: 100%;
+        width: 5rem;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding-top: 5rem;
+        background-color: $primary-color;
+        transition: 0.3s ease-in-out;
+        white-space: nowrap;
+        overflow-x: hidden;
+
+        .navbar-item {
+            padding: 1rem;
+            font-size: 1.5rem;
+            color: $grey-color;
+            display: block;
+            align-items: center;
+            text-decoration: none;
+            margin-bottom: 1rem;
+
+            #icon {
+                font-size: 2rem;
+                margin-right: 2rem;
+            }
+
+            &:hover {
+                color: white;
+            }
+
+            &.active {
+                border-right: .25rem solid white;
+            }
+        }
+
+        &:hover {
+            width: 13rem;
+        }
+
+        &:hover~.router-outlet {
+            margin-left: 14rem;
+        }
+
+    }
+
+    .router-outlet {
+        margin-left: 7rem;
+        transition: margin-left 0.5s;
+    }
+}

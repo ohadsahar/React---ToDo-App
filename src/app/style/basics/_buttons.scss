@@ -1,0 +1,28 @@
+.btn {
+    background-color: $light-color;
+    padding: 1rem;
+    border-radius: 4px 4px 0px 0px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+    &.btn-primary {
+        @include set-background($primary-color);
+
+        &:hover {
+            background: lighten($primary-color, 5%);
+        }
+    }
+
+    &.btn-dark {
+        @include set-background($dark-color);
+
+        &:hover {
+            background: lighten($dark-color, 5%);
+        }
+    }
+
+    &:hover {
+        background: lighten($dark-color, 20%);
+        color: #fff;
+    }
+}

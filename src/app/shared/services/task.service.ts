@@ -1,4 +1,7 @@
 import { TaskDto } from "../interface/task.dto";
+import { environment } from "../../config/enviorment";
+
+const serverUrl = `${environment.serverUrl}/task`;
 
 export const createTask = (taskData: TaskDto) => {
    return taskData;

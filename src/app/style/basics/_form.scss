@@ -1,0 +1,24 @@
+form {
+    display: flex;
+    flex-direction: column;
+    .form-input {
+        margin-bottom: 1rem;
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        input {
+            margin-top: .5rem;
+            border-radius: 4px;
+            padding: .2rem;
+            border: 2px solid #dadada;
+            width: 100%;
+        }
+
+        input:focus {
+            border-color: #9ecaed;
+            box-shadow: 0 0 10px #9ecaed;
+        }
+    }
+
+}

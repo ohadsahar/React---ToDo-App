@@ -6,9 +6,13 @@
 //Base
 @import './basics/base';
 @import './basics/buttons';
-
+@import './basics/list';
+@import './basics/messages';
+@import './basics/form';
+@import './basics/dialog';
 
 //Components
 @import './components/app.scss';
 @import './components/side-navbar.scss';
 @import './components/home.scss';
+@import './components/task.scss';

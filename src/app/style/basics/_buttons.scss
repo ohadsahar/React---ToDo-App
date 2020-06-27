@@ -1,7 +1,8 @@
 .btn {
+    border: none;
     background-color: $light-color;
     padding: 1rem;
-    border-radius: 4px 4px 0px 0px;
+    border-radius:4px;
     transition: all 0.2s ease-in;
     cursor: pointer;
 
@@ -20,6 +21,7 @@
             background: lighten($dark-color, 5%);
         }
     }
+
 
     &:hover {
         background: lighten($dark-color, 20%);

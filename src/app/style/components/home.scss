@@ -1,5 +1,15 @@
 .home {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    .wellcome {
+        text-align: center;
+        p {
+            font-size: 2.5rem;
+        }
+        h2 {
+            text-align: center;
+            font-weight: 400;
+            color: lightgrey;
+        }
+    }
 }

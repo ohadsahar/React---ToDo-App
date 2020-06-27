@@ -1,0 +1,15 @@
+.task-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    h1 {
+        font-size: 1.5rem;
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .tasks {
+      
+    }
+}

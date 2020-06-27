@@ -1,18 +1,19 @@
 import React from 'react'
+import { FaBeer } from 'react-icons/fa'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { ThunkDispatch } from 'redux-thunk'
 import { RootState } from '../../../store'
-import { createTask, deleteTask, getTasks } from '../../../store/task/task.actions'
+import { createTask, deleteTask, getTasks, getTaskById } from '../../../store/task/task.actions'
 import { TaskActionTypes } from '../../../store/task/task.types'
 import { TaskInterfaceProp } from '../../interface/task-prop.dto'
 import { TaskDto } from '../../interface/task.dto'
 import AddTask from './add-task-dialog'
-import { FaBeer } from 'react-icons/fa';
 
 interface LinkDispatchProps {
     createTask: (taskData: TaskDto) => void;
     deleteTask: (taskData: TaskDto) => void;
+    getTaskById: (taskId: string) => void;
     getTasks: () => void;
 }
 
@@ -76,7 +77,8 @@ const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, any, TaskActionTy
     return {
         createTask: bindActionCreators(createTask, dispatch),
         deleteTask: bindActionCreators(deleteTask, dispatch),
-        getTasks: bindActionCreators(getTasks, dispatch)
+        getTasks: bindActionCreators(getTasks, dispatch),
+        getTaskById: bindActionCreators(getTaskById, dispatch)
     }
 };
 

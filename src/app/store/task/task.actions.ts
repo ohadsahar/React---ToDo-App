@@ -28,18 +28,18 @@ export function getTasks() {
     return async (dispatch: any) => {
         try {
             const result = taskService.getTasks();
-            dispatch({ type: GET_TASKS });
+            dispatch({ type: GET_TASKS, payload: result });
         } catch (error) {
             console.log(error);
         }
     }
 }
 
-export function getTask(id: string) {
+export function getTaskById(id: string) {
     return async (dispatch: any) => {
         try {
             const result = taskService.getTask(id);
-            dispatch({ type: GET_TASKS });
+            dispatch({ type: GET_TASKS, payload: result });
         } catch (error) {
             console.log(error);
         }
